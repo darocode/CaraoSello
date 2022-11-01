@@ -40,6 +40,7 @@ jugar.addEventListener('click',()=>{
                     total = total+apuesta;
                     perder=false
                     i++
+                    contPer--
 
                 }else if(moneda != maquinaR){
 
