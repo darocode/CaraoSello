@@ -1,16 +1,17 @@
-const option = document.querySelectorAll('input__juego');
-const apuesta = document.querySelectorAll('.input__juego');
+
+const jugar = document.getElementById('jugar')
+
+var moneda= 0;
+
+var i=0;
+
+jugar.addEventListener('click',()=>{
+    const apuesta = document.getElementById('apuesta').value;
+    console.log(apuesta)
+})
 
 
-option.forEach((cadaOption, i) => {
 
-    option[i].addEventListener('click',()=>{
-        
-        option.forEach((cadaOption, i)=>{
-            option[i].classList.remove('activo')
-            console.log('clcik')
-        })
 
-    })
-});
+
 

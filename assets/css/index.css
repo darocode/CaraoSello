@@ -78,18 +78,6 @@ input{
     justify-content: center;
     align-items: center;
 }
-.input__juego{
-    width: 14em;
-    padding: 1em;
-    margin: 1em;
-}
-
-.input__juego-active{
-    width: 14em;
-    padding: 1em;
-    margin: 1em;
-    background: red;
-}
 .apuesta__container{
     display: flex;
     justify-content: center;
