@@ -9,9 +9,10 @@ var i=0;
 
 jugar.addEventListener('click',()=>{
 
-    const apuesta = document.getElementById('apuesta').value;
+    var apuesta = document.getElementById('apuesta').value;
 
     if(apuesta>0){
+        var perder=false
 
             var ciclo = true;
 
@@ -23,17 +24,36 @@ jugar.addEventListener('click',()=>{
             console.log(apuesta)
 
            
-                var maquinaR= Math.random().toPrecision(1)*2+1;
+                var maquinaR= Math.floor((Math.random() *2)+1);
                 console.log(maquinaR)
 
                 total=parseInt(total);
+
+                apuesta = parseInt(apuesta);
 
                 moneda=prompt('Elige Cara o Sello \n 1.Cara\n 2.Sello');
 
                 if(moneda==maquinaR){
                     total = total+apuesta;
                     window.alert('Ganasteee')
-             }
+                    perder=false
+                    i++
+                    
+                }else if(moneda != maquinaR){
+                    total= total-apuesta;
+                    window.alert('Perdiste')
+                    perder = true
+                    i++
+                    
+                }
+
+                if(total>0){
+                    window.alert(`Usted ha jugado ${i} veces y le tiene ${total} pesos`)
+                    window.alert('Gracias por jugar')
+                }else if(perder==true){
+                    window.alert(`Usted ha jugado ${i} veces y le tiene ${total} pesos`)
+                    window.alert('Perdio')
+                }
             
     }else{
         window.alert('Tienes que apostar algo mayor a 0')
