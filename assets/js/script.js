@@ -6,7 +6,15 @@ var moneda= 0;
 var i=0;
 
 jugar.addEventListener('click',()=>{
+
+    
+
     const apuesta = document.getElementById('apuesta').value;
+    var total=apuesta;
+
+    const animacion = document.getElementById('animacion');
+    animacion.classList.add('active')
+
     console.log(apuesta)
 })
 

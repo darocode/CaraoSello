@@ -27,11 +27,18 @@ input{
     justify-content: center;
     align-items: center;
     width: 100%;
+
+}
+
+.move__coin.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     animation-name: mianimacion;
     animation-duration: 4s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
-
 }
 @keyframes mianimacion {
     0% {
