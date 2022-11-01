@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+input{
+    border: none;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    text-align: center;
+}
+
+/*Animacion de la Moneda*/
+.move__coin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation-name: mianimacion;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes mianimacion {
+    0% {
+        transform: rotateX(90deg);
+    }
+    25%{
+        transform: rotateX(180deg);
+    }
+    50%{
+        transform: rotateX(360deg);
+    }
+    75%{
+        transform: rotateX(-180deg);
+    }
+    100%{
+        transform: rotateX(-90deg);
+    }
+}
+/*Icono de la moneda*/
+.coin__icon{
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 200, 0);
+    font-size: 18em;
+    text-shadow: 1em;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 158, 241);
+    width: 90%;
+    padding: 2em;
+    box-shadow: 10px 9px 0px 0px rgba(65,44,97,0.94);
+-webkit-box-shadow: 10px 9px 0px 0px rgba(65,44,97,0.94);
+-moz-box-shadow: 10px 9px 0px 0px rgba(65,44,97,0.94);
+}
+.option__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input__juego{
+    width: 14em;
+    padding: 1em;
+    margin: 1em;
+}
+.apuesta__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.apuesta__container input{
+    width: 14em;
+    height: 4em;
+    text-align: center;
+}
+.apuesta__container input::placeholder{
+    text-align: center;
+    font-size: 1.1em;
+}
+.footer__container{
+    width: 100%;
+    margin-top: 10%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background: rgb(174, 174, 174);
+}
+.footer__container input{
+    width: 15em;
+    height: 2em;
+    margin: 1em;
+}
