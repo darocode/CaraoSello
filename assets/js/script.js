@@ -4,7 +4,7 @@ const jugar = document.getElementById('jugar');
 var moneda= 0;
 
 var i=0;
-
+var contPer=0
 
 
 jugar.addEventListener('click',()=>{
@@ -17,7 +17,7 @@ jugar.addEventListener('click',()=>{
 
             var total=apuesta;
 
-            var contadorPerdida=0
+            
 
             const animacion = document.getElementById('animacion');
             animacion.classList.toggle('active')
@@ -27,6 +27,8 @@ jugar.addEventListener('click',()=>{
            
                 var maquinaR= Math.floor((Math.random() *2)+1);
                 console.log(maquinaR)
+
+                
 
                 total=parseInt(total);
 
@@ -44,8 +46,10 @@ jugar.addEventListener('click',()=>{
                     total= total-apuesta;
                     perder = true
                     i++
+                    contPer++
                     
                 }
+                console.log(contPer)
 
                 if(total>0 && perder==false){
 
@@ -54,16 +58,13 @@ jugar.addEventListener('click',()=>{
                     window.alert('Gracias por jugar')
 
                 }else if(perder==true){
+
                     
                         window.alert('Has perdido')
                         window.alert(`Usted ha jugado ${i} veces y tiene ${total} pesos`)
                         window.alert('Gracias por jugar')
-
-                        
-                        console.log(contadorPerdida)
-                    if(contadorPerdida==0){
-                        console.log('Perdiendo contador')
-                    }
+                }if(contPer>5){
+                    window.alert('Estas en mala racha')
                 }
 
                 
