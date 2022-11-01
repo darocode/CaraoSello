@@ -13,7 +13,7 @@ jugar.addEventListener('click',()=>{
     var total=apuesta;
 
     const animacion = document.getElementById('animacion');
-    animacion.classList.add('active')
+    animacion.classList.toggle('active')
 
     console.log(apuesta)
 })
