@@ -12,9 +12,8 @@ jugar.addEventListener('click',()=>{
     var apuesta = document.getElementById('apuesta').value;
 
     if(apuesta>0){
-        var perder=false
 
-            var ciclo = true;
+            var perder=false
 
             var total=apuesta;
 
@@ -38,8 +37,9 @@ jugar.addEventListener('click',()=>{
                     window.alert('Ganasteee')
                     perder=false
                     i++
-                    
+
                 }else if(moneda != maquinaR){
+
                     total= total-apuesta;
                     window.alert('Perdiste')
                     perder = true
@@ -47,12 +47,18 @@ jugar.addEventListener('click',()=>{
                     
                 }
 
-                if(total>0){
+                if(total>0 && perder==false){
+
+                     window.alert('Has Ganado')
                     window.alert(`Usted ha jugado ${i} veces y le tiene ${total} pesos`)
                     window.alert('Gracias por jugar')
+
                 }else if(perder==true){
-                    window.alert(`Usted ha jugado ${i} veces y le tiene ${total} pesos`)
-                    window.alert('Perdio')
+
+                    window.alert('Has perdido')
+                    window.alert(`Usted ha jugado ${i} veces y tiene ${total} pesos`)
+                    window.alert('Gracias por jugar')
+                    
                 }
             
     }else{
