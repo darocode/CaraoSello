@@ -5,6 +5,7 @@
 }
 body{
     height: 100vh;
+    background-color: rgb(200, 173, 255);
 }
 input{
     border: none;
@@ -17,7 +18,7 @@ input{
     align-items: center;
     flex-direction: column;
 }
-.container h1{
+h1{
     text-align: center;
 }
 
@@ -112,4 +113,43 @@ input{
     width: 15em;
     height: 2em;
     margin: 1em;
+}
+
+
+@media screen and (min-width: 768px){
+    h1{
+        text-align: center;
+    }
+    .container{
+        flex-direction: row;
+        background: rgb(240, 236, 236);
+        margin-top: 5%;
+        box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+    }
+    .move__coin{
+        width: 50%;
+    }
+    .form__container{
+        width: 50%;
+        margin-left: 3%;
+        height: 18em;
+        
+    box-shadow: 10px 9px 0px 0px rgba(65, 44, 97, 0);
+    -webkit-box-shadow: 10px 9px 0px 0px rgba(65, 44, 97, 0);
+    -moz-box-shadow: 10px 9px 0px 0px rgba(65, 44, 97, 0);
+
+
+    }
+    .footer__container{
+        background: rgb(240, 236, 236);
+        width: 50%;
+        left: 25%;
+        box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
+    }
+
+
 }

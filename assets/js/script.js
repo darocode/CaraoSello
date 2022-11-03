@@ -20,7 +20,7 @@ jugar.addEventListener('click',()=>{
             
 
             const animacion = document.getElementById('animacion');
-            animacion.classList.toggle('active')
+            animacion.classList.add('active')
 
             console.log(apuesta)
 
