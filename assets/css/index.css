@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
     background-color: rgb(200, 173, 255);
 }
 input{
     border: none;
+    cursor: pointer;
 }
 
 .container{
@@ -74,6 +74,7 @@ h1{
     align-items: center;
     background-color: rgb(177, 158, 241);
     width: 90%;
+    height: 25em;
     padding: 2em;
     box-shadow: 10px 9px 0px 0px rgba(65,44,97,0.94);
 -webkit-box-shadow: 10px 9px 0px 0px rgba(65,44,97,0.94);
@@ -91,11 +92,13 @@ h1{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 25%;
 }
 .apuesta__container input{
     width: 14em;
     height: 4em;
     text-align: center;
+    font-size: 1.3em;
 }
 .apuesta__container input::placeholder{
     text-align: center;
@@ -104,7 +107,6 @@ h1{
 .footer__container{
     width: 100%;
     margin-top: 10%;
-    position: fixed;
     display: flex;
     justify-content: center;
     background: rgb(174, 174, 174);
@@ -113,9 +115,10 @@ h1{
     width: 15em;
     height: 2em;
     margin: 1em;
+    font-size: 1.3em;
 }
 
-
+/*Tablets*/
 @media screen and (min-width: 768px){
     h1{
         text-align: center;
@@ -145,11 +148,41 @@ h1{
     .footer__container{
         background: rgb(240, 236, 236);
         width: 50%;
-        left: 25%;
+        margin-left: 25%;
         box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
         -webkit-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: -1px 17px 33px 0px rgba(0,0,0,0.75);
     }
+    .footer__container input{
+        font-size: 1.3em;
+    }
 
 
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px){
+    .container{
+        width: 70%;
+        margin-left: 16%;
+        height: 35em;
+    }
+    .form__container{
+        height: 35em;
+    }
+    .apuesta__container{
+        padding: 1em;
+    }
+    .apuesta__container input{
+        width:100%;
+        font-size: 1.5em;
+    }
+    .footer__container{
+        margin-left: 25%;
+        margin-bottom: 5%;
+    }
+
+    .footer__container input{
+        font-size: 1.3em;
+    }
 }
